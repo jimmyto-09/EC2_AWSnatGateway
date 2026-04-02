@@ -21,3 +21,13 @@ This project deploys a secure AWS architecture using Terraform where an EC2 inst
 - Private Route Table → NAT Gateway
 - EC2 Instance (Private)
 - IAM Role for SSM access
+
+---
+##  Security
+
+- No public IP assigned to the private EC2
+- No inbound rules for SSH
+- Access via **SSM Session Manager**
+- IAM Role attached:
+  - `AmazonSSMManagedInstanceCore`
+
