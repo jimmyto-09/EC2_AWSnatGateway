@@ -1,0 +1,18 @@
+ map_public_ip_on_launch = true
+
+cuandoe esto se coloca en la subnet, cualquier EC2 que crees tendrá IP pública automáticamente
+
+
+| Configuración                 | Nivel  | Qué hace                      |
+| ----------------------------- | ------ | ----------------------------- |
+| `map_public_ip_on_launch`     | Subnet | Afecta a TODAS las EC2 nuevas |
+| `associate_public_ip_address` | EC2    | Afecta SOLO a ESA instancia   |
+
+Orden recomendado
+VPC
+Subnets
+Internet Gateway
+Elastic IP ✅
+NAT Gateway ✅
+Route tables
+Associations
